@@ -1,149 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
+<html class="hola-html-reset hola-var">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="csrf-token" content="1646536299:bbPSpgIVx3S61oNDNAO2els8sZ6j2N4TUr2ZryhpI2A=">
-    <title>OIercity IDE 0.5</title>
-    <link rel="stylesheet" href="//cdn.luogu.com.cn/ide/luogu-ide.css?ver=20200320-1"/>
-    <style>
-        html, body, .ide-wrapper {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>首页 - 6872's Blog</title>
+    <link rel="stylesheet" href="kkk.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
-<div id="ide"></div>
-<script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
-<script src="//cdn.luogu.com.cn/ide/luogu-ide.min.js?ver=20200320-1"></script>
-<script>
-    var storage = window.localStorage;
-    var ide = createIDE('#ide');
-    var ws = null, resolveCurrentPromise = null;
-    var joinedChannelID = null;
+<body class="hola-body-typography hola-grey-bg">
+<header class="hola-navbar hola-navbar-transparent hola-navbar-darkbg">
+    <div class="hola-container">
+        <nav class="hola-navbar-main">
+            <a href="#" class="hola-navbar-brand">kkksc03's Resume</a>
+        </nav>
+        <input type="checkbox" class="hola-navbar-toggle" id="navbar-toggle">
+        <label for="navbar-toggle" class="hola-navbar-toggle-label"></label>
+        <nav class="hola-navbar-sub">
+            <a href="https://www.luogu.org">洛谷 Luogu</a>
+        </nav>
+    </div>
+</header>
+<div class="hola-hero hola-hero-dark-bg hola-hero-height-extended">
+    <div class="hola-container hola-hero-content">
+        <img src="icon.png" class="right" style="margin-right: 50px">
+        <h1>汪楚奇 WANG Chuqi (kkksc03)</h1>
 
-    ide.setLanguages([{"value":1,"label":"Pascal","highlight":"pascal"},{"value":2,"label":"C","highlight":"c"},{"value":28,"label":"C++14 (GCC 9)","highlight":"cpp"},{"value":3,"label":"C++98","highlight":"cpp"},{"value":4,"label":"C++11","highlight":"cpp"},{"value":11,"label":"C++14","highlight":"cpp"},{"value":12,"label":"C++17","highlight":"cpp"},{"value":27,"label":"C++20","highlight":"cpp"},{"value":6,"label":"Python 2","highlight":"python"},{"value":24,"label":"PyPy 2","highlight":"python"},{"value":7,"label":"Python 3","highlight":"python"},{"value":25,"label":"PyPy 3","highlight":"python"},{"value":8,"label":"Java 8","highlight":"java"},{"value":15,"label":"Rust","highlight":"rust"},{"value":14,"label":"Go","highlight":"golang"},{"value":19,"label":"Haskell","highlight":"haskell"},{"value":21,"label":"Kotlin\/JVM","highlight":"kotlin"},{"value":22,"label":"Scala","highlight":"scala"},{"value":17,"label":"C# Mono","highlight":"csharp"},{"value":9,"label":"Node.js LTS","highlight":"javascript"},{"value":16,"label":"PHP","highlight":"php"},{"value":13,"label":"Ruby","highlight":"ruby"},{"value":23,"label":"Perl","highlight":"perl"}]);
+        <p>上海洛谷网络科技有限公司 联合创始人<br>
+            Co-founder of Shanghai Luogu Network Technology Co., Ltd.
+        </p>
 
-    // TODO: Implement autosave in IDE.
-    if (storage.getItem('ide-code') !== null) ide.setCode(storage.getItem('ide-code'));
-    if (storage.getItem('ide-language') !== null)
-        ide.setCurrentLanguage(parseInt(storage.getItem('ide-language')));
-    else
-        ide.setCurrentLanguage(4);
+        <p>
+            <a href="mailto:k@luogu.org" class="hola-button hola-button-ghost">
+                <i class="fa fa-envelope-o fa-fw"></i> k#luogu.org
+            </a>
+            <a href="https://www.zhihu.com/people/kkksc03/activities" class="hola-button hola-button-ghost">
+                知乎 / Zhihu
+            </a>
+            <a href="https://www.luogu.org/space/show?uid=1" class="hola-button hola-button-ghost">
+                洛谷个人页面 / HP in Luogu
+            </a>
+        </p>
+    </div>
+</div>
+<div class="hola-container">
+    <div class="hola-card hola-content">
+        <h2><i class="fa fa-graduation-cap fa-fw"></i> 教育背景  EDUCATION BACKGROUND</h2>
+        <p>
+            <strong>香港中文大学 计算机科学理学硕士</strong>
+            <span class="hola-badge right">2017.09 - 2018.06</span>
+            <br>
+            M.Sc. Computer Science, The Chinese University of Hong Kong (CUHK)
+            <br>
+            中国香港 Hong Kong, China
+        </p>
+        <p>
+            <strong>上海交通大学 微电子科学与工程理学学士</strong>
+            <span class="hola-badge right">2013.09 - 2017.06</span>
+            <br>
+            B.S. Microelectronics, Shanghai Jiao Tong University (SJTU)
+            <br>
+            中国上海 Shanghai, China
+        </p>
+        <hr>
+        <h2><i class="fa fa-trophy fa-fw"></i> 荣誉与获奖  HONORS & AWARDS</h2>
+        <p>
+            <strong>香港中文大学优秀新生奖学金</strong>
+            <span class="hola-badge right">2017</span>
+            <br>
+            Entrance Scholarship of CUHK
+        </p>
+        <p>
+            <strong>上海交通大学学术奖学金</strong>
+            <span class="hola-badge right">2014</span>
+            <br>
+            Academic Excellence Scholarship of SJTU
+        </p>
+        <hr>
+        <h2><i class="fa fa-gears  fa-fw"></i> 项目经验  EXPERIENCES</h2>
+        <p>
+            <strong>联合创始人</strong> 上海洛谷网络科技有限公司
+            <span class="hola-badge right">2018.01 - 至今/Present</span>
+            <br>
+            Co-founder of <em>Shanghai Luogu Network Technology Co., Ltd.</em>
+        </p>
+        <ul>
+            <li>投资成立上海洛谷网络科技有限公司，领导开发多种产品。<br>
+                Established <em>Shanghai Luogu Network Technology Co., Ltd.</em>, leading the development of a variety of products.</li>
+            <li>举办多次洛谷信息学竞赛线上课程。<br>
+                Organized multiple online programming courses.</li>
+        </ul>
+        <p>
+            <strong>助理研究员</strong> 上海交通大学 智能物联网中心
+            <span class="hola-badge right">2015.01 - 2017.01</span>
+            <br>
+            Assist Researcher, <em>Intelligent Internet of things Research Center, Shanghai Jiao Tong University</em>
+        </p>
+        <ul>
+            <li>搭建了 Acemap( <a href="http://acemap.sjtu.edu.cn/">http://acemap.sjtu.edu.cn/</a> ) 的基础框架；<br>
+                Set up the initial framework of the project: <em>Acemap</em></li>
+            <li>使用 PHP 语言、Codeigniter 框架开发了 Acemap 的后端逻辑；<br>
+                Developed the back-end logic (using PHP and Codeigniter framework) of <em>Acemap</em>.</li>
+            <li>设计并开发了一种可视化的、可以展现不同学术主题之间关系的学术地图。<br>
+                Designed a logic map that presents the complex relationships of academic topics.</li>
+        </ul>
+        <p>
+            <strong>开发者</strong> 上海交通大学 东岳工作室
+            <span class="hola-badge right">2014.03 - 2015.03</span>
+            <br>
+            Developer, <em>Dongyue Web Studio, Shanghai Jiao Tong University</em>
+        </p>
+        <ul>
+            <li>设计了同去网（ <a href="https://tongqu.me/">https://tongqu.me/</a>）的部分页面的前端和后端功能。<br>
+                Designed the user interface and some back-end functions of <em>Tongqu</em>. </li>
+        </ul>
+        <p>
+            <strong>创立者、开发者、首席运营官</strong> 洛谷网 （ <a href="https://www.luogu.org/">https://www.luogu.org/</a> ）
+            <span class="hola-badge right">2013.03 - 至今/Present</span>
+            <br>
+            Founder, Developer, Executive, <em>Luogu Online Judge</em>
+        </p>
+        <ul>
+            <li>创建并带领一个团队持续迭代开发、品牌运营洛谷网，使其成为了中国领先的在线测评系统。<br>
+                Established and improved the <em>Luogu Online Judge</em> system which is well-known in China.
+            </li>
+            <li>
+                开发了洛谷1到3的几乎所有前端、后端功能，包括评测机系统架构、题目、比赛、用户社区等。<br>
+                Developed most of the features, such as problem set, code judging, discussing forum, algorithm contest, and wiki.
+            </li>
+        </ul>
+        <hr>
+        <h2><i class="fa fa-line-chart fa-fw"></i> 技术与能力 SKILLS & ABILITIES</h2>
+        <p>
+            <strong>全栈互联网工程师</strong> Full Stack Website Developer
+        </p>
+        <ul>
+            <li>PHP / MySQL</li>
+            <li>HTML / JavaScript / CSS</li>
+            <li>Python</li>
+            <li>Linux 运维 / Linux operation and maintenance</li>
+        </ul>
+        <p>
+            <strong>学术研究工具</strong> Tools for Academic Research
+        </p>
+        <ul>
+            <li> C/C++ </li>
+            <li> MATLAB / Python </li>
+            <li> Verilog HDL, Vivado, ISE</li>
+            <li> LaTeX</li>
+        </ul>
+        <p>
+            <strong>外语能力</strong> Foreign Languages
+        </p>
+        <ul>
+            <li> 英语 / English </li>
+            <li> 日语 / Japanese （N1 高级 / High Level）</li>
+        </ul>
+    </div>
 
-    var saveInterval = setInterval(function () {
-        var code = ide.getCode(), lang = ide.getCurrentLanguage();
-        storage.setItem('ide-code', code);
-        storage.setItem('ide-language', lang);
-    }, 2500);
+</div>
 
-    function run() {
-        var code = ide.getCode(), lang = ide.getCurrentLanguage(), input = ide.getInput(), o2 = ide.isO2Enabled();
-
-        var promise = new Promise(function(resolve) {
-            resolveCurrentPromise = resolve;
-        });
-
-        $.post("/api/ide_submit", {
-            code: code,
-            lang: lang,
-            input: input,
-            o2: o2 ? "true" : "",
-            'csrf-token': $('meta[name=csrf-token]').attr('content')
-        }, function (resp) {
-            if (resp.status === 200) connectWs(resp.data.rid);
-            else {
-                ide.setRunInfo(resp.data);
-                resolveCurrentPromise();
-            }
-        });
-
-        return promise;
-    }
-    ide.setRunHandler(run);
-
-    function connectWs(id) {
-        function joinChannel(rid) {
-            rid = '' + rid;
-            if (joinedChannelID !== null)
-                ws.send(JSON.stringify({
-                    "type": "disconnect_channel",
-                    "channel": "ide.track",
-                    "channel_param": joinedChannelID
-                }));
-            ws.send(JSON.stringify({
-                "type": "join_channel",
-                "channel": "ide.track",
-                "channel_param": rid
-            }));
-            joinedChannelID = rid;
-        }
-
-        if (ws !== null) {
-            if (id)
-                joinChannel(id);
-            return;
-        }
-
-        try {
-            ws = new WebSocket('wss://ws.luogu.com.cn/ws');
-        } catch (e) {
-            alert("错误", "无法连接追踪服务器，请稍后重试。");
-            return;
-        }
-        ws.onopen = function () {
-            if (id)
-                joinChannel(id);
-        };
-        ws.onmessage = function (event) {
-            data = JSON.parse(event.data);
-            if (data._ws_type === "server_broadcast") {
-                var result = getResult(data);
-                if (result) {
-                    ide.setRunInfo(result.label);
-                    ide.setOutput(result.output);
-                    resolveCurrentPromise()
-                }
-            }
-        };
-    }
-
-    connectWs();
-
-    function getResult(data) {
-        var label = null, output = null;
-        if (data.type === "compile") {
-            if (!data.success) {
-                output = data.desc;
-                label = '编译失败';
-            }
-        } else if (data.type === "execute") {
-            output = data.output;
-            switch (data.execute.error) {
-                case null:
-                    label = '运行成功 '
-                        + data.execute.real_time + 'ms ' + data.execute.memory + 'kb';
-                    break;
-                case 'Runtime Error':
-                    label = '运行时错误';
-                    break;
-                case 'Time Limit Exceeded':
-                    label = '超过时间限制';
-                    break;
-                case 'Memory Limit Exceeded':
-                    label = '超出内存限制';
-                    break;
-                case 'Output Limit Exceeded':
-                    label = '超出输出限制';
-                    break;
-            }
-        }
-
-        return label ? {label: label, output: output} : null;
-    }
-</script>
+<footer class="hola-footer">
+    <div class="hola-container">
+        <p>Theme by Holakit</p>
+        <p>This project is hosted on Aliyun.</p>
+    </div>
+</footer>
 </body>
 </html>
